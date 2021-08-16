@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css" />
+</head>
+
+<body>
+    <section class="">
+        <div class="container">
+            <h1 class=" my-3 text-center"> Welcome to my baap er bank </h1>
+        </div>
+        <div class=" my-2 displaymoeny row text-center">
+            <div class="col bg-danger m-1 text-white">
+                <h2>Diposit</h2>
+                <h2>$<span id="depositText">00</span></h2>
+            </div>
+            <div class="col  m-1 bg-warning text-white">
+                <h2>withdraw</h2>
+                <h2>$ <span id="withdrawText">000</span></h2>
+            </div>
+            <div class="text-white col bg-primary  m-1">
+                <h2>Balence</h2>
+                <h2>$<span id="balanceText">0100</span></h2>
+            </div>
+        </div>
+        <div id="deposite" class="row  deposit">
+            <div class="col mr-3">
+                <div class="text text-center py-4 rounded">
+                    <h3>Please Deposite</h3>
+                    <input class=" py-1 rounded border-primary " type="number" name="" id="depositeInput" placeholder="Deposite Amount" value="" />
+                    <br />
+                    <button id="depositBtn" class="mt-2 btn btn-primary" type="submit">Deposite</button>
+                </div>
+            </div>
+            <div class="col  mrg">
+                <div class="text text-center py-4 rounded">
+                    <h3>Please withdraw</h3>
+                    <input class=" py-1 rounded border-primary " type="number" name="" id="withdrawInput" placeholder="withdraw Amount" value="" />
+                    <br />
+                    <button id="withdrawBtn" class="mt-2 btn btn-primary" type="submit">Woodrow</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <script type="text/javascript" charset="utf-8">
+        //deposite selection
+        let depositBtn = document.getElementById('depositBtn')
+        let depositeInput = document.getElementById('depositeInput')
+        let depositText = document.getElementById('depositText')
+        let balanceText = document.getElementById('balanceText')
+            //btn add eventletchener 
+        depositBtn.addEventListener('click', function() {
+            //previous adding deposite
+            const previousdepositString = depositText.innerText
+                //convarting number
+            const previousdepositText = parseFloat(previousdepositString)
+                //newDeposite 
+            let newdepositString = depositeInput.value
+                //convarting number
+            let newdepositvalue = parseFloat(newdepositString)
+                //changing deposit value 
+            depositText.innerText = previousdepositText + newdepositvalue
+
+            //clear input feild
+            depositeInput.value = ''
+
+
+            // balance section
+            let balanceValueString = balanceText.innerText
+                //convarting number
+            let previousBalanceValue = parseFloat(balanceValueString)
+            const newbalanceValue = previousBalanceValue + newdepositvalue
+
+            //setting value
+            balanceText.innerText = newbalanceValue
+        })
+
+        //withdraw section
+        let withdrawInput = document.getElementById('withdrawInput')
+        let withdrawBtn = document.getElementById('withdrawBtn')
+        let withdrawText = document.getElementById('withdrawText')
+
+        withdrawBtn.addEventListener('click', function() {
+
+            //input
+            let withdrawInputString = withdrawInput.value
+            let withdrawInputValue = parseFloat(withdrawInputString)
+                //innertext
+            let withdrawTextString = withdrawText.innerText
+
+            let withdrawTextValue = parseFloat(withdrawTextString)
+            console.log(withdrawTextValue)
+                //adding 
+            withdrawText.innerText = withdrawInputValue + withdrawTextValue
+
+            //clearing
+            withdrawInput.value = ''
+
+
+
+            //balance section
+            let balanceText = document.getElementById('balanceText')
+            let balanceValueString = balanceText.innerText;
+            //convarting number
+            let balanceValue = parseFloat(balanceValueString)
+            const newbalanceValue = balanceValue -
+                withdrawInputValue
+            balanceText.innerText = newbalanceValue
+            console.log(newbalanceValue)
+
+        })
+    </script> -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

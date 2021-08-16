@@ -1,0 +1,23 @@
+section h1 {
+    font-size: 16px;
+}
+
+section {
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.deposit .col {
+    color: #fff;
+    background-color: #00cec9;
+    border-radius: 10px;
+}
+
+.deposit .mrg {
+    margin-left: 20px;
+}
+
+.displaymoeny .col {
+    border-radius: 7px;
+}

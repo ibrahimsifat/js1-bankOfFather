@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Simple Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style type="text/css" media="all">
+        #login {
+            height: 100vh;
+            width: 100%;
+            background-color: #88D8B6;
+            flex-direction: column;
+        }
+        
+        input {
+            font-size: 18px
+        }
+        
+        h1 {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <section class=" d-flex ustify-content-center align-items-center" id="login">
+        <div class="container  ">
+            <h1 class="text-center text-white">Please Login</h1>
+            <div class="text-center">
+                <input class=" py-1 rounded border-primary " type="email" placeholder="Enter the Email" name="" id="user" value="" />
+                <input class="py-1 mt-2 rounded border-primary " type="password" placeholder="Enter The Password" name="" id="password" value="" />
+                <br />
+                <button id="submitbtn" class="mt-2 btn btn-primary" type="submit">Login</button>
+                <button id="showtbtn" class="mt-2 btn btn-primary" type="submit">Show email-password</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script type="text/javascript" charset="utf-8">
+        let user = document.getElementById('user')
+        let password = document.getElementById('password')
+        let submit = document.getElementById('submitbtn')
+            //define email and password
+        var defineEmail = 'abc@baap.com'
+        var definePassword = 'password'
+        submit.addEventListener('click', function() {
+                let userValue = user.value
+                let userPassword = password.value
+
+                if (userValue == defineEmail && userPassword == definePassword) {
+                    window.location.href = 'Banking.html'
+                } else if (userValue == '' && userPassword == '') {
+                    alert('enter data first')
+                } else if (userValue == '') {
+                    alert('Enter your email')
+                } else if (userPassword == '') {
+                    alert('enter your password')
+                } else(
+                    alert('Wrong Value')
+                )
+            })
+            ////show the user pass word
+        let showtbtn = document.getElementById('showtbtn')
+        showtbtn.addEventListener('click', function() {
+
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
