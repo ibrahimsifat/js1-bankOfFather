@@ -14,16 +14,25 @@ function updateValue(inputId, textId, totalAdd) {
     let inputValue = parseFloat(input.value)
     let text = document.getElementById(textId)
     let textValue = parseFloat(text.innerText)
-    text.innerText = inputValue + textValue
-        //clear input value
+    if (balenceText.innerText <= inputValue) {
+        alert('not enough moeny ')
+    } else {
+        if (inputValue > 0) {
+            text.innerText = inputValue + textValue
+        }
+    }
+
+    //clear input value
     input.value = ''
     let total = document.getElementById('balanceText')
     let totalValue = parseFloat(total.innerText)
-    if (totalAdd) {
-        total.innerText = totalValue + inputValue
-    } else {
-        total.innerText = totalValue - inputValue
+    if (inputValue > 0 && totalValue > inputValue) {
+        if (totalAdd) {
+            total.innerText = totalValue + inputValue
+        } else {
+            total.innerText = totalValue - inputValue
 
+        }
     }
 }
 //deposit event handle 
