@@ -8,40 +8,29 @@ let dipositText = document.getElementById('dipositText')
 let withdrawText = document.getElementById('withdrawText')
     //balence text
 let balenceText = document.getElementById('balanceText')
-    // updateValue function 
-function updateValue(value, isDiposit) {
-
-    let input = document.getElementById(value + 'Input')
+    // adding value function
+function updateValue(inputId, textId, totalAdd) {
+    let input = document.getElementById(inputId)
     let inputValue = parseFloat(input.value)
-    let text = document.getElementById(value + 'Text')
+    let text = document.getElementById(textId)
     let textValue = parseFloat(text.innerText)
-    if (inputValue > 0) {
-        text.innerText = inputValue + textValue
+    text.innerText = inputValue + textValue
+        //clear input value
+    input.value = ''
+    let total = document.getElementById('balanceText')
+    let totalValue = parseFloat(total.innerText)
+    if (totalAdd) {
+        total.innerText = totalValue + inputValue
     } else {
-        text.innerText = textValue
-    }
+        total.innerText = totalValue - inputValue
 
-    //condition
-    if (inputValue < 0) {
-        alert(inputValue + ' is a nigative number Enter the valued number')
-
-    } else if (inputValue > 0) {
-        //balenceTotal
-        let balenceTotal = parseFloat(balenceText.innerText)
-        if (isDiposit) {
-            balenceText.innerText = balenceTotal + inputValue
-        } else {
-            balenceText.innerText = balenceTotal - inputValue
-        }
     }
 }
+//deposit event handle 
 dipositBtn.addEventListener('click', function() {
-    updateValue('diposit', true)
-        // clear input
-    dipositInput.value = ''
-})
+        updateValue('dipositInput', 'dipositText', true)
+    })
+    //withdrow event handle 
 withdrawBtn.addEventListener('click', function() {
-    updateValue('withdraw', false)
-        // clear input
-    withdrawInput.value = ''
+    updateValue('withdrawInput', 'withdrawText', false)
 })

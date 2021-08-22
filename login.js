@@ -31,9 +31,7 @@ let user2 = document.getElementById('user2')
 let showBtnuser = document.getElementById('showbtnuser')
 let showbtnpassword = document.getElementById('showbtnpassword')
 showBtnuser.addEventListener('click', function() {
-
     user2.style.visibility = 'visible'
-
 })
 showbtnpassword.addEventListener('click', function() {
 
